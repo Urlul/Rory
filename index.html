@@ -1,19 +1,33 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script src="https://cdn.counter.dev/script.js" data-id="5e7e16bf-b857-408d-9eb9-783c002c9042" data-utcoffset="3"></script>
+</body>
+</html>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rory's Links</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
       background: #fefefe;
-      font-family: sans-serif;
+      font-family: 'Open Sans', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       flex-direction: column;
       padding: 20px;
+      margin: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
     }
 
     .profile-img {
@@ -22,38 +36,62 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       margin: 0;
       font-size: 24px;
+      color: #222;
+    }
+
+    h2 {
+      margin: 25px 0 15px;
+      color: #222;
+      font-size: 20px;
     }
 
     p {
       margin: 10px 0 20px;
       color: #555;
       text-align: center;
-      font-family: 'Segoe UI', sans-serif;
       font-size: 16px;
       line-height: 1.6;
+      max-width: 500px;
+    }
 
+    .links-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     .link {
-      display: block;
-      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
       color: white;
       padding: 15px;
-      margin: 10px 0;
+      margin: 12px 0;
       text-align: center;
       border-radius: 8px;
       text-decoration: none;
       transition: 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      min-height: 48px;
     }
 
     .link:hover {
       background: #333;
-      transform: scale(1.05);
+      transform: scale(1.02);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .link i {
+      margin-right: 10px;
+      font-size: 18px;
     }
 
     footer {
@@ -61,6 +99,10 @@
       color: #888;
       font-size: 14px;
       text-align: center;
+    }
+
+    .counter-dev {
+      display: none !important;
     }
 
     @media (max-width: 600px) {
@@ -73,25 +115,40 @@
 </head>
 <body>
 
-  <img src="https://i.imgur.com/n3dCL3i_d.webp" alt="Profile" class="profile-img" />
+  <img src="https://i.imgur.com/n3dCL3i_d.webp" alt="Rory's profile picture" class="profile-img" />
 
   <h1>Urlul-Rory</h1>
   <h3>Hi there, this is Rory's everything</h3> 
   <p>I'm a 16 year old high school student from <strong>Saudi Arabia</strong>, I'm interested in cybersecurity and hacking</p>
 
-  <a class="link" href="https://github.com/Urlul" target="_blank">Github</a>
-  <a class="link" href="https://t.me/rfoon" target="_blank">Telegram</a>
-  <a class="link" href="#" onclick="navigator.clipboard.writeText('N0ner'); alert('copied!!'); return false;">my Discord</a>
+  <div class="links-container">
+    <a class="link" href="https://github.com/Urlul" target="_blank"><i class="fab fa-github"></i> Github</a>
+    <a class="link" href="https://t.me/rfoon" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a class="link" href="#" id="discord-copy"><i class="fab fa-discord"></i> Copy Discord</a>
 
-  <h2>My Certificates</h2>
+    <h2>My Certificates</h2>
 
-  <a class="link" href="https://assets.safcsp.cloud/public/certificates/13c2a085-0313-43ac-8def-0a16892d875d/1751300898_386bb501-a5f8-42dc-b36d-6fe7365ffff9.png" target="_blank">Cybersecurity: Threats & Attacks – Satr</a>
-
-  <a class="link" href="https://assets.safcsp.cloud/public/certificates/13c2a085-0313-43ac-8def-0a16892d875d/1751300949_f15ceb8d-252f-4685-8918-b688612e81fc.png" target="_blank">Network Security 101 – Satr</a>
-
-  <a class="link" href="https://assets.safcsp.cloud/public/certificates/13c2a085-0313-43ac-8def-0a16892d875d/1751302899_823270b5-392f-4a49-8291-270aee2f2188.png" target="_blank">Intro to Cybersecurity – Satr</a>
+    <a class="link" href="https://assets.safcsp.cloud/public/certificates/13c2a085-0313-43ac-8def-0a16892d875d/1751300898_386bb501-a5f8-42dc-b36d-6fe7365ffff9.png" target="_blank"><i class="fas fa-certificate"></i> Cybersecurity: Threats & Attacks – Satr</a>
+    <a class="link" href="https://assets.safcsp.cloud/public/certificates/13c2a085-0313-43ac-8def-0a16892d875d/1751300949_f15ceb8d-252f-4685-8918-b688612e81fc.png" target="_blank"><i class="fas fa-certificate"></i> Network Security 101 – Satr</a>
+    <a class="link" href="https://assets.safcsp.cloud/public/certificates/13c2a085-0313-43ac-8def-0a16892d875d/1751302899_823270b5-392f-4a49-8291-270aee2f2188.png" target="_blank"><i class="fas fa-certificate"></i> Intro to Cybersecurity – Satr</a>
+  </div>
 
   <footer>Welcome to Rory's 2025</footer>
 
+  <script>
+‎    // كود نسخ الديسكورد
+    document.getElementById('discord-copy').addEventListener('click', function(e) {
+      e.preventDefault();
+      navigator.clipboard.writeText('N0ner');
+      
+      const originalText = this.innerHTML;
+      this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      setTimeout(() => {
+        this.innerHTML = originalText;
+      }, 2000);
+    });
+  </script>
+
+  <script src="https://cdn.counter.dev/script.js" data-id="5e7e16bf-b857-408d-9eb9-783c002c9042" data-utcoffset="3"></script>
 </body>
 </html>
